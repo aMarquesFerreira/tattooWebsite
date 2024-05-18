@@ -23,9 +23,14 @@ a {
 #navLogo {
     font-family: 'Outfit', sans-serif;
     font-weight: 700; /* Outfit Bold */
-    font-size: 20px;
-    margin: 0; /* Remove qualquer margem */
+    font-size: 25px;
+    cursor: pointer;
 }
+
+#navLogo:hover {
+    color: rgba(239, 236, 239, 0.91); /* Cor de fundo ao passar o mouse */
+}
+
 
 .nav-links {
     display: flex;

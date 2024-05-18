@@ -1,15 +1,15 @@
 <nav class="navbar">
     <div class="container">
         <div class="col-2 logo">
-            <p id="navLogo">patricia.tattooer</p>
+            <p id="navLogo" routerLink="/home" class="nav-logo-button">patricia.tattooer</p>
         </div>
         <div class="col-3"></div> <!-- Adicionado para criar o espaço necessário -->
         <div class="col-5 nav-menu">
             <ul class="nav-links">
-                <li><a href="#our-space">OUR SPACE</a></li>
+                <li><a routerLink="/espaco3d">OUR SPACE</a></li>
                 <li><a routerLink="/about">ABOUT</a></li>
                 <li><a routerLink="/pricing">PRICING</a></li>
-                <li><a routerLink="/contact">CONTACT</a></li>
+                <li><a routerLink="/footer">CONTACT</a></li>
                 <li><a routerLink="/work">WORK</a></li>
             </ul>
         </div>
@@ -22,17 +22,17 @@
             <span></span>
         </div>
         <div class="dropdown-menu" [class.active]="menuActive">
-            <a href="#our-space">OUR SPACE</a>
+            <a routerLink="/espaco3d">OUR SPACE</a>
             <span class="divider"></span>
             <a routerLink="/about">ABOUT</a>
             <span class="divider"></span>
             <a routerLink="/pricing">PRICING</a>
             <span class="divider"></span>
-            <a routerLink="/contact">CONTACT</a>
+            <a routerLink="/footer">CONTACT</a>
             <span class="divider"></span>
             <a routerLink="/work">WORK</a>
             <span class="divider" style="margin-bottom: 10px;"></span>
-            <a href="#bookings" class="booking-button">BOOKINGS</a>
+            <a routerLink="/bookings" class="booking-button">BOOKINGS</a>
         </div>
     </div>
 </nav>
