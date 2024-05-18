@@ -8,6 +8,7 @@ import { Espaco3dComponent } from './espaco3d/espaco3d.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PricingComponent } from './pricing/pricing.component';
     Espaco3dComponent,
     FooterComponent,
     NavbarComponent,
-    PricingComponent
+    PricingComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,
