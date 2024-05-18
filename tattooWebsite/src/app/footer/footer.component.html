@@ -1,1 +1,63 @@
-<p>footer works!</p>
+<ng-container *ngIf="!isResponsive">
+<div class="container footerContent">
+    <div class="col-3 patriciaFont">patricia.tattooer</div>
+    <div class="col-3">
+        <div class="column">
+            <p class="buttonsFont">Menu</p>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Work</a>
+            <a href="#">Pricing</a>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="column">
+            <p class="buttonsFont">Contact</p>
+            <a href="#">Email</a>
+            <a href="#">Instagram</a>
+            <a href="#">X.</a>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="column whatsapp">
+            <p class="buttonsFont">Join on Whatsapp</p>
+            <div style="display: flex; align-items: center;">
+                <input type="text" placeholder="Telephone Number">
+                <button>SUBMIT</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="isResponsive">
+    <div class="container footerContent" style="margin-top: 100px;">
+        <div class="col-12 patriciaFont" style="text-align: center; margin-bottom: 20px;">patricia.tattooer</div>
+        <div class="col-6">
+            <div class="column">
+                <p class="buttonsFont">Menu</p>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Work</a>
+                <a href="#">Pricing</a>
+            </div>
+        </div>
+        <div class="col-6" style="align-items: flex-end;">
+            <div class="column">
+                <p class="buttonsFont">Contact</p>
+                <a href="#">Email</a>
+                <a href="#">Instagram</a>
+                <a href="#">X.</a>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="column whatsapp" style="text-align: center;">
+                <p class="buttonsFont">Join on Whatsapp</p>
+                <div style="display: flex; align-items: center;">
+                    <input type="text" placeholder="Telephone Number">
+                    <button>SUBMIT</button>
+                </div>
+            </div>
+        </div>
+        </div>
+</ng-container>

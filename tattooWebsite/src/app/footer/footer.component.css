@@ -1,0 +1,80 @@
+.footerContent{
+    margin-top: 190px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.column .buttonsFont{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.whatsapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.whatsapp input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    width: 200px;
+    margin-right: -4px;
+    background-color: #151448; /* Fundo escuro */
+    color: #bbb; /* Texto claro */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.whatsapp button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #7b68ee;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.whatsapp button:hover {
+    background-color: #6a5acd;
+}
+
+
+.column a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+
+.patriciaFont{
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700; /* Outfit Bold */
+    font-size: 20px;
+}
+
+
+/*RESPONSIVO*/
+
+@media (max-width: 1090px) {
+
+
+}
+

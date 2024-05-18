@@ -20,7 +20,7 @@ export class HomeComponent implements AfterViewInit {
   }
 
   checkResponsive(width: number) {
-    this.isResponsive = width < 768; // Defina o limite para telas responsivas
+    this.isResponsive = width < 1090; // Defina o limite para telas responsivas
     if (this.isResponsive && this.testimonialsWrapper) {
       this.showTestimonial(this.currentTestimonial);
     }
