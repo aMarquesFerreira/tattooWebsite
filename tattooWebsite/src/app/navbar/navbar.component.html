@@ -7,10 +7,10 @@
         <div class="col-5 nav-menu">
             <ul class="nav-links">
                 <li><a href="#our-space">OUR SPACE</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#pricing">PRICING</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#contact">WORK</a></li>
+                <li><a routerLink="/about">ABOUT</a></li>
+                <li><a routerLink="/pricing">PRICING</a></li>
+                <li><a routerLink="/contact">CONTACT</a></li>
+                <li><a routerLink="/work">WORK</a></li>
             </ul>
         </div>
         <div class="col-2 booking">
@@ -24,13 +24,13 @@
         <div class="dropdown-menu" [class.active]="menuActive">
             <a href="#our-space">OUR SPACE</a>
             <span class="divider"></span>
-            <a href="#about">ABOUT</a>
+            <a routerLink="/about">ABOUT</a>
             <span class="divider"></span>
-            <a href="#pricing">PRICING</a>
+            <a routerLink="/pricing">PRICING</a>
             <span class="divider"></span>
-            <a href="#contact">CONTACT</a>
+            <a routerLink="/contact">CONTACT</a>
             <span class="divider"></span>
-            <a href="#contact">WORK</a>
+            <a routerLink="/work">WORK</a>
             <span class="divider" style="margin-bottom: 10px;"></span>
             <a href="#bookings" class="booking-button">BOOKINGS</a>
         </div>
