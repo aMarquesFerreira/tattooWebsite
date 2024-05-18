@@ -1,0 +1,184 @@
+/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+body {
+    background-color: #000235;
+    color: white; /* Definir a cor do texto como branco para contraste */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.buttonsFont{
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600; /* Outfit SemiBold */
+}
+
+
+/* Estilo para h1 */
+h1 {
+    font-family: 'Orienta', sans-serif;
+    font-size: 87px;
+}
+  
+/* Estilo para p */
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+  
+  /* Estilo para h2 */
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300; /* Open Sans Light */
+    font-size: 57px;
+    letter-spacing: 0.7px;
+    /*line-height: 27.5px;*/
+  }
+  
+  /* Estilo para h3 */
+  h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700; /* Outfit Bold */
+    font-size: 57px;
+    line-height: 100%;
+  }
+ 
+
+.buttonsStyle {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600; /* Outfit SemiBold */
+    font-size: 20px;
+    line-height: 27.5px;
+    letter-spacing: 0.12em;
+    padding: 10px 20px; /* Espaçamento interno para os botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 80px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: all 0.3s ease; /* Transição suave para animações */
+}
+
+
+
+  /* Configuração da grid geral */
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    justify-content: center; /* Centraliza a grid */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 80px; /* Espaçamento lateral para a grid */
+}
+
+.verticalCenter{
+    display: flex;
+    align-items: center;
+}
+
+.col {
+    grid-column: span 12;
+}
+
+  /* Definições de colunas para diferentes larguras */
+.col-1 {
+    grid-column: span 1;
+  }
+  
+  .col-2 {
+    grid-column: span 2;
+  }
+  
+  .col-3 {
+    grid-column: span 3;
+  }
+  
+  .col-4 {
+    grid-column: span 4;
+  }
+  
+  .col-5 {
+    grid-column: span 5;
+  }
+  
+  .col-6 {
+    grid-column: span 6;
+  }
+  
+  .col-7 {
+    grid-column: span 7;
+  }
+  
+  .col-8 {
+    grid-column: span 8;
+  }
+  
+  .col-9 {
+    grid-column: span 9;
+  }
+  
+  .col-10 {
+    grid-column: span 10;
+  }
+  
+  .col-11 {
+    grid-column: span 11;
+  }
+  
+  .col-12 {
+    grid-column: span 12;
+  }
+
+
+  /* Estilo para a página inicial ocupar 100vh */
+  
+
+  
+
+
+  /*RESPONSIVO*/
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 30px; /* Reduz o padding lateral para telas menores */
+    }
+
+    .home {
+      position: relative;
+      height: 100vh; /* Ocupa toda a altura da viewport */
+      overflow: hidden;
+      padding-top: 120px;
+    }
+
+    #top-left-image, #bottom-right-image {
+      width: 1000px; /* Ajuste o tamanho das imagens para telas menores */
+      height: 1000px; /* Ajuste o tamanho das imagens para telas menores */
+    }
+
+    #top-left-image {
+      top: -300px; /* Ajuste conforme necessário */
+      left: -250px; /* Ajuste conforme necessário */
+    }
+
+    #bottom-right-image {
+        bottom: -400px; /* Ajuste conforme necessário */
+        right: -500px; /* Ajuste conforme necessário */
+    }
+
+    h2{
+      font-size: calc(57px * 0.65); /* 80% do tamanho original */
+    }
+
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      padding: 0 15px; /* Reduz ainda mais o padding lateral para telas muito pequenas */
+    }
+
+    h2{
+      font-size: calc(57px * 0.6); /* 80% do tamanho original */
+    }
+  }
+  

@@ -1,0 +1,383 @@
+.container.home .col-6 h1 {
+    /* color: #FF9BFF; */
+    text-shadow: 
+    .1vw 0vw .25vw #ffb6c1, 
+    .2vw 0vw .25vw #ffb6c1, 
+    .4vw 0vw .25vw #ffb6c1, 
+    .1vw 0vw 0vw #ff6fcf, 
+    .1vw 0vw 1vw #ff6fcf, 
+    .1vw 0vw 2vw #ff6fcf, 
+    .1vw 0vw 0vw #ff6fcf, 
+    .2vw 0vw .1vw #ff6fcf, 
+    .4vw 0vw 2vw #ff6fcf, 
+    .1vw 0vw 0vw #ff6fcf, 
+    .1vw 0vw 1vw #ff6fcf, 
+    .1vw 0vw 2vw #ff6fcf, 
+    .1vw 0vw 1vw #ff6fcf, 
+    .2vw 0vw 5vw #ff6fcf, 
+    .2vw 0vw 10vw #ff6fcf, 
+    .2vw 0vw 20vw #ff6fcf, 
+    .1vw 0vw 30vw #ff6fcf;
+}
+
+.home {
+    position: relative;
+    height: auto; /* Ocupa toda a altura da viewport */
+    overflow: hidden;
+    padding-top: 100px;
+    margin-bottom: 130px;
+}
+
+/* Estilo para as imagens */
+#top-left-image, #bottom-right-image {
+    position: absolute;
+    width: 1500px; /* Ajuste conforme necessário */
+    height: 1500px; /* Ajuste conforme necessário */
+    opacity: 0.77;
+}
+
+#top-left-image {
+    top: -500px; /* Ajuste conforme necessário */
+    left: -400px; /* Ajuste conforme necessário */
+}
+
+#bottom-right-image {
+    bottom: -600px; /* Ajuste conforme necessário */
+    right: -700px; /* Ajuste conforme necessário */
+}
+
+.col-6 {
+    z-index: 10;
+}
+
+.col-6 h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.col-6 p {
+    margin-bottom: 50px;
+}
+
+#main-image {
+    width: 100%;
+    height: auto;
+    margin-top: 58.290px;
+    filter: brightness(1.1) contrast(1.2) saturate(1.1) hue-rotate(-20deg); /* Ajuste a tonalidade aqui */
+    image-rendering: -webkit-optimize-contrast; /* Para navegadores WebKit */
+    image-rendering: crisp-edges; /* Para outros navegadores */
+}
+
+.main-image-cotainer {
+    display: flex;
+    justify-content: flex-end; /* Alinha à direita */
+}
+
+/* Estilo para o container dos botões */
+.button-container {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Ajuste a altura conforme necessário */
+}
+
+/* Estilos específicos para button1 (canto inferior esquerdo) */
+.button1 {
+    position: absolute;
+    bottom: 20px; /* Ajuste a distância do fundo */
+    left: 20px; /* Ajuste a distância da esquerda */
+    background-color: #8D8DDA;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.button1:hover {
+    background-color: #6B6BB3; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Estilos específicos para button2 (canto inferior direito) */
+.button2 {
+    position: absolute;
+    bottom: 20px; /* Ajuste a distância do fundo */
+    right: 20px; /* Ajuste a distância da direita */
+    background-color: transparent;
+    color: white;
+    border: 2px solid #ABD9D9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+}
+
+.button2:hover {
+    background-color: rgba(171, 217, 217, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+}
+
+.tatStyWrapper {
+    position: relative; /* Necessário para o pseudo-elemento */
+    background-color: transparent; /* Para garantir que a cor original não afete */
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-around; /* Distribui os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    overflow: hidden; /* Garante que o pseudo-elemento não transborde */
+}
+
+.tatStyWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #6358BD;
+    opacity: 0.19; /* Opacidade aplicada apenas ao fundo */
+    border-radius: 7px; /* Mantém o raio da borda */
+    z-index: 1; /* Fica abaixo do texto */
+}
+
+.tatStyWrapper p {
+    position: relative;
+    z-index: 2; /* Fica acima do pseudo-elemento */
+    margin: 10; /* Remove margens padrão dos parágrafos */
+}
+
+.divider-container {
+    width: 100%; /* Garante que ocupe a largura total do contêiner pai */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo da div */
+}
+
+.divider {
+    display: block;
+    width: 100%; /* Ocupa 60% da largura da viewport */
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5); /* Linha de separação */
+}
+
+
+
+.col-12.testimonials{
+    margin-top: 70px !important;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonials-container {
+    background-color: #1c1f3f; /* Ajuste conforme necessário */
+    border-radius: 10px; /* Para bordas arredondadas */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    color: white; /* Ajuste conforme necessário */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 200px;
+}
+
+.testimonials-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -50px; /* Metade da altura da imagem para posicioná-la acima do centro */
+    left: 50%;
+    transform: translateX(-50%);
+    mix-blend-mode: luminosity; /* Tentativa de imitar o efeito */
+    filter: grayscale(100%) contrast(120%);
+}
+
+.testimonials-container .buttonsFont{
+    margin-top: 60px; /* Espaço suficiente para a imagem */
+    font-weight: bold;
+}
+
+.testimonials-container o{
+    margin-top: 10px; /* Espaço suficiente para a imagem */
+}
+
+
+.gradient-box {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(90deg, #FFAEFF, #5151C6);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.patriciaFont{
+    color: black;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700; /* Outfit Bold */
+    font-size: 20px;
+}
+
+.gradient-box button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+/*RESPONSIVO*/
+
+@media (max-width: 1090px) {
+
+    .home {
+        height: auto !important;
+    }
+    
+
+    .container{
+        display: block;
+    }
+
+    #top-left-image {
+        display: none;
+    }
+    
+    #bottom-right-image {
+        display: none;
+    }
+
+    #main-image {
+        display: none;
+    }
+
+    .col-5 {
+        display: none;
+    }
+
+    .main-image-cotainer {
+        display: none;
+    }
+
+    .col-6 {
+        grid-column: span 12;
+        text-align: center;
+    }
+
+    .home {
+        margin-bottom: 60px;
+    }
+
+    .col-12 {
+        text-align: center; /* Centraliza o texto em telas menores */
+        display: block;
+    }
+
+    .tatStyWrapper{
+        height: auto;
+    }
+
+    /**/
+
+    .testimonials-container {
+        display: block;
+    }
+
+    .testimonials-wrapper {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: auto; /* Firefox */
+        scrollbar-color: #888 #444; /* Cor da barra e da trilha */
+    }
+
+    .testimonials-wrapper::-webkit-scrollbar {
+        height: 12px; /* Altura da barra de rolagem */
+        display: block;
+    }
+
+    .testimonials-wrapper::-webkit-scrollbar-track {
+        background: #444; /* Cor da trilha da barra de rolagem */
+    }
+
+    .testimonials-wrapper::-webkit-scrollbar-thumb {
+        background-color: #888; /* Cor da barra de rolagem */
+        border-radius: 10px; /* Borda arredondada da barra de rolagem */
+        border: 3px solid #444; /* Espaço ao redor da barra de rolagem */
+    }
+
+    .testimonials-container {
+        min-width: 100%;
+        scroll-snap-align: center;
+    }
+
+    .testimonials-navigation {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 665px) {
+    .home {
+        height: auto !important;
+        padding-top: 60px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px; /* Reduz ainda mais o padding lateral para telas muito pequenas */
+    }
+
+    .home {
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        padding-top: 320px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home {
+        height: auto !important;
+        padding-top: 20px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .button-container {
+        position: relative;
+    }
+
+    .buttonsStyle {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .home {
+        height: 100vh !important;
+        padding-top: 50px !important;
+    }
+
+    .home h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .home .col-6 {
+        grid-column: span 12;
+    }
+
+    .home h1 {
+        font-size: 4.5rem !important;
+    }
+}

@@ -1,0 +1,112 @@
+
+<div class="container home">
+    <div class="col-6">
+        <h1>BABE YOU LOOK SO COOL</h1>
+        <h2>PRIVATE TATTOO STUDIO</h2>
+        <p>fashion designer | tattoo artist</p>
+        <div class="button-container">
+          <button class="buttonsStyle button1">BOOKINGS</button>
+          <button class="buttonsStyle button2">WORK</button>
+        </div>
+    </div>
+    
+    <div class="col-6 main-image-cotainer" style="z-index: -1;">
+      <img id="main-image" src="./assets/imgHome1.png" alt="Tattoo-Girl Image">
+    </div>
+</div>
+
+
+<div class="container" style="overflow: hidden;">
+
+  <img id="top-left-image" src="./assets/Ellipse.png" alt="Ellipse Image">
+  <img id="bottom-right-image" src="./assets/Ellipse.png" alt="Ellipse Image">
+
+  <div class="col-12 divider-container">
+    <span class="divider"></span>
+  </div>
+
+  <div class="col-12">
+    <p class="buttonsFont">TATTOO STYLES</p>
+  </div>
+
+  <div class="col-12 tatStyWrapper">
+    <p class="tattoo-style buttonsFont">FINE LINE</p>
+    <p class="tattoo-style buttonsFont">FLASH TATS</p>
+    <p class="tattoo-style buttonsFont">REALISM</p>
+    <p class="tattoo-style buttonsFont">MUCH MORE</p>    
+  </div>
+
+<ng-container *ngIf="!isResponsive">
+  <div class="col-12 testimonials">
+    <p class="buttonsFont">TESTIMONIALS</p>
+    <h3>Read What Others<br>Have To Say</h3>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isResponsive">
+  <div class="col-12 testimonials">
+    <p class="buttonsFont">TESTIMONIALS</p>
+    <h3 style="font-size: 2.5em;">Read What Others<br>Have To Say</h3>
+    <p class="buttonsFont" style="font-size: 15px;">(Swipe to see all)</p>
+  </div>
+</ng-container>
+
+ <!-- Não Responsivo -->
+ <ng-container *ngIf="!isResponsive">
+  <div class="col-4 testimonials-container">
+    <img src="./assets/testimonialImg.png" alt="Good">
+    <p class="buttonsFont">GOOD</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+</div>
+<div class="col-4 testimonials-container">
+    <img src="./assets/testimonialImg.png" alt="Good">
+    <p class="buttonsFont">BAD</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+</div>
+<div class="col-4 testimonials-container">
+    <img src="./assets/testimonialImg.png" alt="Good">
+    <p class="buttonsFont">YYYY</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+</div>
+</ng-container>
+
+<!-- Responsivo -->
+<ng-container *ngIf="isResponsive">
+  <div class="testimonials-wrapper" #testimonialsWrapper>
+    <div class="col-4 testimonials-container" style="margin-top: 60px; height: auto;">
+      <img src="./assets/testimonialImg.png" alt="Good">
+      <p class="buttonsFont">GOOD</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+    </div>
+    <div class="col-4 testimonials-container" style="margin-top: 60px; height: auto;">
+      <img src="./assets/testimonialImg.png" alt="Good">      
+      <p class="buttonsFont">BAD</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+    </div>
+    <div class="col-4 testimonials-container" style="margin-top: 60px; height: auto;">
+      <img src="./assets/testimonialImg.png" alt="Good">
+      <p class="buttonsFont">YYYY</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+    </div>
+</div>
+</ng-container>
+
+<ng-container *ngIf="!isResponsive">
+  <div class="col-3"></div>
+<div class="col-6 gradient-box">
+  <p class="patriciaFont">patricia.tattooer</p>
+  <h3 style="font-size: 2.5em;">Know The Space!</h3>
+  <button clsss="buttonsFont">SEE SPACE 3D</button>
+</div>
+</ng-container>
+
+<ng-container *ngIf="isResponsive">
+  <div class="gradient-box">
+    <p class="patriciaFont">patricia.tattooer</p>
+    <h3 style="font-size: 2.5em;">Know The Space!</h3>
+    <button clsss="buttonsFont">SEE SPACE 3D</button>
+  </div>
+</ng-container>
+  
+</div>
+
