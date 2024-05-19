@@ -1,8 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 
 h1 {
@@ -28,20 +23,10 @@ h1 {
 }
 
 
-
-
-body{
-    margin: 0;
-    padding:0;
-    position: relative;
-    font-family: 'source sans pro', sans-serif;
-}
-
 .image-gallery{
     width: 100%;
     max-width: 89.5%;
-    margin: 50px auto;
-    padding:100px 0px 0px 0px;
+    margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-auto-rows: 300px;
@@ -52,6 +37,7 @@ body{
 .image-gallery .image-box{
     position: relative;
     overflow: hidden;
+    border-radius: 15px; 
 }
 
 .image-gallery .image-box:nth-child(3n){
@@ -74,7 +60,7 @@ body{
     height: 100%;
     object-fit: cover;
     transition: all 0.5s ease;
-    
+    border-radius: 15px; 
 }
 
 .image-gallery .image-box:hover img{
@@ -93,6 +79,7 @@ body{
     opacity: 1;
     transform: all 0.5s ease;
     z-index: 1;
+    border-radius: 15px; 
 }
 
 .image-gallery .image-box:hover .overlay{
