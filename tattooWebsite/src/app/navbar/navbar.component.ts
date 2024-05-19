@@ -21,4 +21,11 @@ export class NavbarComponent {
       }
     }
   }
+
+  scrollToFooter() {
+    const footerElement = document.getElementById('footer');
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

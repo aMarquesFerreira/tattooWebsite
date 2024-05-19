@@ -10,7 +10,7 @@
                 <li><a routerLink="/about">ABOUT</a></li>
                 <li><a routerLink="/pricing">PRICING</a></li>
                 <li><a routerLink="/work">WORK</a></li>
-                <li><a routerLink="/footer">CONTACT</a></li>
+                <li><a (click)="scrollToFooter()">CONTACT</a></li>
             </ul>
         </div>
         <div class="col-2 booking">
@@ -30,7 +30,7 @@
             <span class="divider"></span>
             <a routerLink="/work">WORK</a>
             <span class="divider"></span>
-            <a routerLink="/footer">CONTACT</a>
+            <a (click)="scrollToFooter()">CONTACT</a>
             <span class="divider" style="margin-bottom: 10px;"></span>
             <a routerLink="/bookings" class="booking-button">BOOKINGS</a>
         </div>
