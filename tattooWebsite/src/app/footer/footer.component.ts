@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import {AfterViewInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
