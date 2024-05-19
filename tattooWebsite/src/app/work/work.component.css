@@ -4,6 +4,32 @@
     box-sizing: border-box;
 }
 
+
+h1 {
+    /* color: #FF9BFF; */
+    text-shadow: 
+    0.05vw 0vw 0.05vw #ffb6c1, 
+    0.1vw 0vw 0.05vw #ffb6c1, 
+    0.2vw 0vw 0.05vw #ffb6c1, 
+    0.05vw 0vw 0vw #ff6fcf, 
+    0.05vw 0vw 0.2vw #ff6fcf, 
+    0.05vw 0vw 0.5vw #ff6fcf, 
+    0.05vw 0vw 0vw #ff6fcf, 
+    0.1vw 0vw 0.05vw #ff6fcf, 
+    0.2vw 0vw 0.5vw #ff6fcf, 
+    0.05vw 0vw 0vw #ff6fcf, 
+    0.05vw 0vw 0.2vw #ff6fcf, 
+    0.05vw 0vw 0.5vw #ff6fcf, 
+    0.05vw 0vw 0.2vw #ff6fcf, 
+    0.1vw 0vw 1.25vw #ff6fcf, 
+    0.1vw 0vw 2.5vw #ff6fcf, 
+    0.1vw 0vw 5vw #ff6fcf, 
+    0.05vw 0vw 7.5vw #ff6fcf;
+}
+
+
+
+
 body{
     margin: 0;
     padding:0;

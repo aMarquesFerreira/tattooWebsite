@@ -1,1 +1,70 @@
-<p>pricing works!</p>
+<ng-container *ngIf="!isResponsive">
+    <div class="container about">
+        <div class="col-12" style="text-align: center;">
+            <h1>Pricing</h1>
+        </div>
+
+        <img id="top-center-image" src="./assets/Ellipse.png" alt="Ellipse Image">
+
+        <div class="col-12" style="text-align: center;">
+            <h3>Estilos</h3>
+        </div>
+
+        <div class="col-12 tatStyWrapper">
+            <p class="tattoo-style buttonsFont">FINE LINE</p>
+            <p class="tattoo-style buttonsFont">FLASH TATS</p>
+            <p class="tattoo-style buttonsFont">REALISM</p>
+            <p class="tattoo-style buttonsFont">MUCH MORE</p>    
+        </div>
+
+
+        <div class="col-4 testimonials-container">
+            <h3 class="buttonsFont">37€</h3>
+            <p class="tattoo-style buttonsFont">FINE LINE</p>
+        </div>
+        <div class="col-4 testimonials-container">
+            <h3 class="buttonsFont">37€</h3>
+            <p class="tattoo-style buttonsFont">FINE LINE</p>
+        </div>
+        <div class="col-4 testimonials-container">
+            <h3 class="buttonsFont">37€</h3>
+            <p class="tattoo-style buttonsFont">FINE LINE</p>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="isResponsive">
+    <div class="container about">
+        <div class="col-12" style="text-align: center;">
+            <h1>Pricing</h1>
+        </div>
+
+        <img id="top-center-image" src="./assets/Ellipse.png" alt="Ellipse Image">
+
+        <div class="col-12" style="text-align: center;">
+            <h3>Estilos</h3>
+        </div>
+
+        <div class="col-12 tatStyWrapper" style="display: block; text-align: center;">
+            <p class="tattoo-style buttonsFont">FINE LINE</p>
+            <p class="tattoo-style buttonsFont">FLASH TATS</p>
+            <p class="tattoo-style buttonsFont">REALISM</p>
+            <p class="tattoo-style buttonsFont">MUCH MORE</p>    
+        </div>
+
+
+        <div class="col-4 testimonials-container">
+            <h3 class="buttonsFont">37€</h3>
+            <p class="tattoo-style buttonsFont">FINE LINE</p>
+        </div>
+        <div class="col-4 testimonials-container">
+            <h3 class="buttonsFont">37€</h3>
+            <p class="tattoo-style buttonsFont">FINE LINE</p>
+        </div>
+        <div class="col-4 testimonials-container">
+            <h3 class="buttonsFont">37€</h3>
+            <p class="tattoo-style buttonsFont">FINE LINE</p>
+        </div>
+    </div>
+</ng-container>

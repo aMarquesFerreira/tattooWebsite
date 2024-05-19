@@ -1,0 +1,135 @@
+h1 {
+    /* color: #FF9BFF; */
+    text-shadow: 
+    0.05vw 0vw 0.05vw #ffb6c1, 
+    0.1vw 0vw 0.05vw #ffb6c1, 
+    0.2vw 0vw 0.05vw #ffb6c1, 
+    0.05vw 0vw 0vw #ff6fcf, 
+    0.05vw 0vw 0.2vw #ff6fcf, 
+    0.05vw 0vw 0.5vw #ff6fcf, 
+    0.05vw 0vw 0vw #ff6fcf, 
+    0.1vw 0vw 0.05vw #ff6fcf, 
+    0.2vw 0vw 0.5vw #ff6fcf, 
+    0.05vw 0vw 0vw #ff6fcf, 
+    0.05vw 0vw 0.2vw #ff6fcf, 
+    0.05vw 0vw 0.5vw #ff6fcf, 
+    0.05vw 0vw 0.2vw #ff6fcf, 
+    0.1vw 0vw 1.25vw #ff6fcf, 
+    0.1vw 0vw 2.5vw #ff6fcf, 
+    0.1vw 0vw 5vw #ff6fcf, 
+    0.05vw 0vw 7.5vw #ff6fcf;
+}
+
+.tatStyWrapper {
+    position: relative; /* Necessário para o pseudo-elemento */
+    background-color: transparent; /* Para garantir que a cor original não afete */
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-around; /* Distribui os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    overflow: hidden; /* Garante que o pseudo-elemento não transborde */
+    margin-bottom: 100px;
+}
+
+.tatStyWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #6358BD;
+    opacity: 0.19; /* Opacidade aplicada apenas ao fundo */
+    border-radius: 7px; /* Mantém o raio da borda */
+    z-index: 1; /* Fica abaixo do texto */
+}
+
+.tatStyWrapper p {
+    position: relative;
+    z-index: 2; /* Fica acima do pseudo-elemento */
+    margin: 10; /* Remove margens padrão dos parágrafos */
+}
+
+.testimonials-container {
+    background-color: #1c1f3f; /* Ajuste conforme necessário */
+    border-radius: 10px; /* Para bordas arredondadas */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    color: white; /* Ajuste conforme necessário */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 200px;
+}
+
+
+
+.testimonials-container .buttonsFont{
+    margin-top: 60px; /* Espaço suficiente para a imagem */
+    font-weight: bold;
+}
+
+.testimonials-container o{
+    margin-top: 10px; /* Espaço suficiente para a imagem */
+}
+
+.about {
+    position: relative;
+    height: auto; /* Ocupa toda a altura da viewport */
+    overflow: hidden;
+    padding-top: 70px;
+    margin-bottom: 130px;
+}
+
+#top-center-image{
+    position: absolute;
+    width: 1500px; /* Ajuste conforme necessário */
+    height: 1500px; /* Ajuste conforme necessário */
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#top-center-image {
+    top: -700px; /* Ajuste conforme necessário */
+}
+
+#perfil-image{
+    width: 100%;
+    height: auto;
+    mix-blend-mode: luminosity; /* Tentativa de imitar o efeito */
+    filter: grayscale(100%) contrast(120%);
+}
+
+
+
+
+/*RESPONSIVO*/
+
+@media (max-width: 1090px) {
+    .container{
+        display: block;
+    }
+
+    .perfil{
+        display: flex;
+        justify-content: center;
+    }
+
+    .col-5{
+        text-align: center;
+    }
+
+
+    #perfil-image{
+        width: 70% !important;
+        height: auto !important;
+    }
+
+    h3{
+        font-size: 2.5em;
+    }
+
+    p{
+        font-size: 18px;
+    }
+}
