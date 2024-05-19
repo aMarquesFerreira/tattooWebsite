@@ -50,4 +50,8 @@ export class HomeComponent implements AfterViewInit {
       this.showTestimonial(this.currentTestimonial);
     }
   }
+
+  navigateToTop() {
+    window.scrollTo(0,0);
+}
 }
