@@ -1,0 +1,80 @@
+h1 {
+    /* color: #FF9BFF; */
+    text-shadow: 
+    0.05vw 0vw 0.05vw #ffb6c1, 
+    0.1vw 0vw 0.05vw #ffb6c1, 
+    0.2vw 0vw 0.05vw #ffb6c1, 
+    0.05vw 0vw 0vw #ff6fcf, 
+    0.05vw 0vw 0.2vw #ff6fcf, 
+    0.05vw 0vw 0.5vw #ff6fcf, 
+    0.05vw 0vw 0vw #ff6fcf, 
+    0.1vw 0vw 0.05vw #ff6fcf, 
+    0.2vw 0vw 0.5vw #ff6fcf, 
+    0.05vw 0vw 0vw #ff6fcf, 
+    0.05vw 0vw 0.2vw #ff6fcf, 
+    0.05vw 0vw 0.5vw #ff6fcf, 
+    0.05vw 0vw 0.2vw #ff6fcf, 
+    0.1vw 0vw 1.25vw #ff6fcf, 
+    0.1vw 0vw 2.5vw #ff6fcf, 
+    0.1vw 0vw 5vw #ff6fcf, 
+    0.05vw 0vw 7.5vw #ff6fcf;
+}
+
+.about {
+    position: relative;
+    height: auto; /* Ocupa toda a altura da viewport */
+    overflow: hidden;
+    padding-top: 70px;
+    margin-bottom: 130px;
+}
+
+#top-center-image{
+    position: absolute;
+    width: 1500px; /* Ajuste conforme necessário */
+    height: 1500px; /* Ajuste conforme necessário */
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#top-center-image {
+    top: -700px; /* Ajuste conforme necessário */
+}
+
+#perfil-image{
+    width: 100%;
+    height: auto;
+    mix-blend-mode: luminosity; /* Tentativa de imitar o efeito */
+    filter: grayscale(100%) contrast(120%);
+}
+
+
+/*RESPONSIVO*/
+
+@media (max-width: 1090px) {
+    .container{
+        display: block;
+    }
+
+    .perfil{
+        display: flex;
+        justify-content: center;
+    }
+
+    .col-5{
+        text-align: center;
+    }
+
+
+    #perfil-image{
+        width: 70% !important;
+        height: auto !important;
+    }
+
+    h3{
+        font-size: 2.5em;
+    }
+
+    p{
+        font-size: 18px;
+    }
+}

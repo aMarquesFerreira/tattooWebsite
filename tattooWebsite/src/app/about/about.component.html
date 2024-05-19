@@ -1,1 +1,44 @@
-<p>about works!</p>
+<ng-container *ngIf="!isResponsive">
+    <div class="container about">
+    <div class="col-12" style="text-align: center;">
+        <h1>About</h1>
+    </div>
+
+    <img id="top-center-image" src="./assets/Ellipse.png" alt="Ellipse Image">
+
+    <div class="col-1"></div>
+    <div class="col-4 perfil">
+        <img id="perfil-image" src="./assets/perfil-image.png" alt="perfil-image.png">
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5">
+        <h3>Patrícia Silva</h3>
+        <p>fashion designer | tattoo artist</p>
+        <h3>PRIVATE TATTOO STUDIO</h3>
+        <p>Matosinhos, Portugal</p>
+    </div>
+</div>
+</ng-container>
+
+
+<ng-container *ngIf="isResponsive">
+    <div class="container about">
+    <div class="col-12" style="text-align: center;">
+        <h1>About</h1>
+    </div>
+
+    <img id="top-center-image" src="./assets/Ellipse.png" alt="Ellipse Image">
+
+    <div class="col-5">
+        <h3 style="margin-bottom: 10px;">Patrícia Silva</h3>
+    </div>
+    <div class="col-4 perfil">
+        <img id="perfil-image" src="./assets/perfil-image.png" alt="perfil-image.png">
+    </div>
+    <div class="col-5">
+        <p style="margin-top: 30px;">fashion designer | tattoo artist</p>
+        <h3>PRIVATE TATTOO STUDIO</h3>
+        <p>Matosinhos, Portugal</p>
+    </div>
+</div>
+</ng-container>
