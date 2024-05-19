@@ -28,4 +28,9 @@ export class NavbarComponent {
       footerElement.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  navigateToTop() {
+      window.scrollTo(0,0);
+  }
+
 }
