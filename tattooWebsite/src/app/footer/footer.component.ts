@@ -24,4 +24,8 @@ export class FooterComponent implements AfterViewInit{
     this.isResponsive = width < 1090; // Defina o limite para telas responsivas
   }
 
+  navigateToTop() {
+    window.scrollTo(0,0);
+}
+
 }
