@@ -24,6 +24,7 @@
     position: relative;
     height: auto; /* Ocupa toda a altura da viewport */
     overflow: hidden;
+    overflow-x: hidden !important;
     padding-top: 100px;
     margin-bottom: 130px;
 }
@@ -33,7 +34,7 @@
     position: absolute;
     width: 1500px; /* Ajuste conforme necessário */
     height: 1500px; /* Ajuste conforme necessário */
-    opacity: 0.77;
+    opacity: 0.70;
 }
 
 #top-left-image {
@@ -60,12 +61,11 @@
 }
 
 #main-image {
-    width: 100%;
+    width: 70%;
     height: auto;
-    margin-top: 58.290px;
-    filter: brightness(1.1) contrast(1.2) saturate(1.1) hue-rotate(-20deg); /* Ajuste a tonalidade aqui */
-    image-rendering: -webkit-optimize-contrast; /* Para navegadores WebKit */
-    image-rendering: crisp-edges; /* Para outros navegadores */
+    margin-top: 0px;
+    mix-blend-mode: luminosity; /* Tentativa de imitar o efeito */
+    filter: grayscale(100%) contrast(120%);
 }
 
 .main-image-cotainer {

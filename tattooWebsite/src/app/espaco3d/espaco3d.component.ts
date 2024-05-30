@@ -45,21 +45,40 @@ export class Espaco3dComponent implements OnInit, OnDestroy {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    
+    // Limitar rotação vertical
+    this.controls.minPolarAngle = Math.PI / 2;
+    this.controls.maxPolarAngle = Math.PI / 2;
 
-    // Carregar mapa equiretangular e aplicá-lo a uma esfera
+    // Limitar rotação horizontal a quase 360 graus
+    this.controls.minAzimuthAngle = -Math.PI + 2; // um pouco menos de -180 graus
+    this.controls.maxAzimuthAngle = Math.PI - 2;  // um pouco menos de 180 graus
+
+    // Carregar mapa equiretangular e aplicá-lo a um cilindro
     const textureLoader = new THREE.TextureLoader();
-    textureLoader.load('./assets/interior.png', (texture) => {
-      const geometry = new THREE.SphereGeometry(500, 60, 40);
+    textureLoader.load('./assets/pano.jpeg', (texture) => {
+      const geometry = new THREE.CylinderGeometry(500, 500, 1000, 60, 1, true);
+      
+      // Modificar coordenadas UV para cobrir apenas metade do cilindro
+      const uvAttribute = geometry.attributes['uv'];
+      for (let i = 0; i < uvAttribute.count; i++) {
+        const u = uvAttribute.getX(i);
+        
+          uvAttribute.setX(i, 0.5 + (u - 0.5)); // Comprimir a imagem para caber nos 180 graus
+        
+      }
+
       const material = new THREE.MeshBasicMaterial({
         map: texture,
         side: THREE.DoubleSide
       });
-      const sphere = new THREE.Mesh(geometry, material);
-      this.scene.add(sphere);
+      const cylinder = new THREE.Mesh(geometry, material);
+      this.scene.add(cylinder);
     });
 
     // Posicionamento da câmera
-    this.camera.position.z = 0.01; // Posição perto do centro da esfera
+    this.camera.position.z = 0.01; // Posição perto do centro do cilindro
+    this.camera.position.y = 0; // Posição central na altura do cilindro
 
     // Iniciar animação
     this.animate();
