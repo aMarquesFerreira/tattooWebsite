@@ -18,15 +18,47 @@
             <a href="#">X.</a>
         </div>
     </div>
+
+
     <div class="col-3">
-        <div class="column whatsapp">
-            <p class="buttonsFont">Join on Whatsapp</p>
-            <div style="display: flex; align-items: center;">
-                <input type="text" placeholder="Telephone Number">
-                <button>SUBMIT</button>
+    <div class="column whatsapp">
+        <p class="buttonsFont">Message on WhatsApp</p>
+        <div class="dropdown-container" style="display: flex; align-items: center; margin-bottom: 30px;">
+            <div class="select-wrapper">
+                <select #countryCode class="country-code-select">
+                    <option value="+351">Portugal (+351)</option>
+                    <option value="+1">United States (+1)</option>
+                    <option value="+44">United Kingdom (+44)</option>
+                    <!-- Adicione outros códigos de país conforme necessário -->
+                </select>
             </div>
         </div>
+        <div style="display: flex; align-items: center;">
+            <input #phoneNumber type="text" placeholder="Telephone Number" class="phone-number-input">
+            <button (click)="validatePhoneNumber()">SUBMIT</button>
+        </div>
+        <p id="phoneValidationMessage" style="color: green; display: none;">
+            &#10003; Valid
+        </p>
+
+        <p class="buttonsFont" style="margin-top: 40px;">Message</p>
+        <div style="display: flex; align-items: center;">
+            <textarea #messageTextarea id="messageWhat" placeholder="Mensagem"></textarea>
+        </div>
+        <button id="buttonMessage" (click)="checkSendMessage()">ENVIAR</button>
+        <p id="messageValidationMessage" style="color: green; display: none;">
+            &#10003; Sent
+        </p>
+        <p id="errorMessage" style="color: red;" *ngIf="errorMessage">{{ errorMessage }}</p>
     </div>
+</div>
+
+      
+      
+      
+      
+      
+    
     <div class="col-12" style="text-align: center;">
         <p style="font-size: 14px;">Website developed and designed by: andreFeMarquez&#64;gmail.com</p>
     </div>
@@ -55,15 +87,39 @@
         </div>
         <div class="col-12">
             <div class="column whatsapp" style="text-align: center;">
-                <p class="buttonsFont">Join on Whatsapp</p>
-                <div style="display: flex; align-items: center;">
-                    <input type="text" placeholder="Telephone Number">
-                    <button>SUBMIT</button>
+                <p class="buttonsFont">Message on WhatsApp</p>
+                <div class="dropdown-container" style="display: flex; align-items: center; margin-bottom: 30px;">
+                    <div class="select-wrapper">
+                        <select #countryCode class="country-code-select">
+                            <option value="+351">Portugal (+351)</option>
+                            <option value="+1">United States (+1)</option>
+                            <option value="+44">United Kingdom (+44)</option>
+                            <!-- Adicione outros códigos de país conforme necessário -->
+                        </select>
+                    </div>
                 </div>
+                <div style="display: flex; align-items: center;">
+                    <input #phoneNumber type="text" placeholder="Telephone Number" class="phone-number-input">
+                    <button (click)="validatePhoneNumber()">SUBMIT</button>
+                </div>
+                <p id="phoneValidationMessage" style="color: green; display: none;">
+                    &#10003; Valid
+                </p>
+
+                <p class="buttonsFont" style="margin-top: 40px;">Message</p>
+                <div style="display: flex; align-items: center;">
+                    <textarea #messageTextarea id="messageWhat" placeholder="Mensagem"></textarea>
+                </div>
+                <button id="buttonMessage" (click)="checkSendMessage()">ENVIAR</button>
+                <p id="messageValidationMessage" style="color: green; display: none;">
+                    &#10003; Sent
+                </p>
+                <p id="errorMessage" style="color: red;" *ngIf="errorMessage">{{ errorMessage }}</p>
             </div>
         </div>
         <div class="col-12" style="text-align: center;">
             <p style="font-size: 14px;">Website developed and designed by: andreFeMarquez&#64;gmail.com</p>
         </div>
-        </div>
+    </div>
 </ng-container>
+

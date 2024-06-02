@@ -23,6 +23,8 @@
     flex-direction: column;
     justify-content: center;
 }
+
+
 .whatsapp input {
     padding: 10px;
     border: none;
@@ -34,6 +36,43 @@
     color: #bbb; /* Texto claro */
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
+}
+
+#messageWhat{
+    padding: 10px;
+    border: none;
+    border-radius: 20px 20px 0 0;
+    outline: none;
+    width: 100%;
+    background-color: #151448; /* Fundo escuro */
+    color: #bbb; /* Texto claro */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    resize: none; /* Prevent manual resizing by the user */
+    overflow: hidden; /* Hide scroll bars */
+}
+
+/* Additional CSS to ensure the textarea resizes with content */
+#messageWhat:focus {
+    height: auto; /* Ensure height adjusts when focused */
+    min-height: 40px; /* Minimum height to maintain initial appearance */
+}
+
+#buttonMessage{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 0 20px 20px;
+    background-color: #7b68ee;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#buttonMessage:hover {
+    background-color: #6a5acd;
 }
 
 .whatsapp button {
@@ -54,6 +93,56 @@
 }
 
 
+.dropdown-container {
+    position: relative;
+}
+
+.country-code-select {
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: #151448; /* Fundo escuro */
+    color: #bbb; /* Texto claro */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    flex: 1;
+}
+
+.country-code-select {
+    border-radius: 20px;
+    width: 100%;
+    appearance: none; /* Remove o estilo padrão do dropdown */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    padding-right: 30px; /* Espaço para o ícone */
+}
+
+.country-code-select option {
+    background-color: #151448; /* Fundo escuro */
+    color: #bbb; /* Texto claro */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.country-code-select:focus {
+    border-color: #6a5acd; /* Cor da borda ao focar */
+}
+
+.dropdown-container::after {
+    content: '\25BC'; /* Ícone de seta para baixo */
+    font-size: 16px;
+    color: #bbb; /* Cor da seta */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* A seta não bloqueia o clique */
+}
+
+
+
 .column a {
     color: white;
     text-decoration: none;
@@ -69,6 +158,26 @@
     font-weight: 700; /* Outfit Bold */
     font-size: 20px;
 }
+
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.select-wrapper::after {
+    content: '\25BC'; /* Ícone de seta para baixo */
+    font-size: 16px;
+    color: #bbb; /* Cor da seta */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* A seta não bloqueia o clique */
+}
+
+
 
 
 /*RESPONSIVO*/
