@@ -36,6 +36,7 @@
     <p class="tattoo-style buttonsFont">MUCH MORE</p>    
   </div>
 
+  <!--COMENTARIOS-->
 <ng-container *ngIf="!isResponsive">
   <div class="col-12 testimonials">
     <p class="buttonsFont">TESTIMONIALS</p>
@@ -90,6 +91,67 @@
     </div>
 </div>
 </ng-container>
+
+
+<!-- Formulário de Comentários -->
+<div class="col-12 testimonials">
+  <h3>Leave a Comment!</h3>
+  <form (ngSubmit)="submitComment()" #commentForm="ngForm" class="comment-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="newComment.name" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating" [(ngModel)]="newComment.rating" required class="form-control">
+        <option *ngFor="let star of stars" [value]="star">{{ star }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="description">Describe your Experience:</label>
+      <textarea id="description" name="description" [(ngModel)]="newComment.description" required class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="photo">Choose a Profile Photo (optional):</label>
+      <input type="file" id="photo" (change)="onFileSelected($event)" class="form-control">
+    </div>
+    <button type="submit" [disabled]="commentForm.invalid" class="btn-submit">Submit Comment</button>
+  </form>
+
+  <!-- Mensagem de sucesso -->
+  <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+</div>
+<!-- FIM Formulário de Comentários -->
+
+
+
+
+<!-- Não Responsivo -->
+<!--
+<ng-container *ngIf="!isResponsive">
+  <div *ngFor="let comment of comments" class="col-4 testimonials-container">
+    <img *ngIf="comment.photo" [src]="comment.photo" alt="User Photo">
+    <p class="buttonsFont">{{ comment.name }}</p>
+    <p>{{ comment.rating }} Stars</p>
+    <p>{{ comment.description }}</p>
+  </div>
+</ng-container>-->
+
+<!-- Responsivo -->
+ <!--
+<ng-container *ngIf="isResponsive">
+  <div class="testimonials-wrapper" #testimonialsWrapper>
+    <div *ngFor="let comment of comments" class="col-4 testimonials-container" style="margin-top: 60px; height: auto;">
+      <img *ngIf="comment.photo" [src]="comment.photo" alt="User Photo">
+      <p class="buttonsFont">{{ comment.name }}</p>
+      <p>{{ comment.rating }} Stars</p>
+      <p>{{ comment.description }}</p>
+    </div>
+  </div>
+</ng-container>
+-->
+<!--FIM COMENTARIOS-->
+
 
 <ng-container *ngIf="!isResponsive">
   <div class="col-3"></div>

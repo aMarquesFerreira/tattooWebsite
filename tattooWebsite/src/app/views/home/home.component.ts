@@ -1,4 +1,6 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { CommentService } from '../../services/comment.service'; // Importe o serviço
 
 @Component({
   selector: 'app-home',
@@ -9,6 +11,20 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('testimonialsWrapper', { static: false }) testimonialsWrapper!: ElementRef;
   currentTestimonial: number = 0;
   isResponsive: boolean = false;
+  successMessage: string = ''; // Nova propriedade para a mensagem de sucesso
+
+  // Novo comentário
+  newComment: any = {
+    name: '',
+    rating: null,
+    description: '',
+    photo: null
+  };
+
+  comments: any[] = [];
+  stars: number[] = [1, 2, 3, 4, 5];
+
+  constructor(private commentService: CommentService) {} // Injete o serviço
 
   ngAfterViewInit() {
     this.checkResponsive(window.innerWidth);
@@ -53,5 +69,38 @@ export class HomeComponent implements AfterViewInit {
 
   navigateToTop() {
     window.scrollTo(0,0);
-}
+  }
+
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.newComment.photo = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  submitComment() {
+    this.commentService.submitComment(this.newComment).subscribe(
+      response => {
+        console.log('Comment submitted successfully', response);
+        this.successMessage = 'Comment submitted successfully!'; // Definir a mensagem de sucesso
+        // Limpar o formulário após o envio, se desejado
+        this.newComment = {
+          name: '',
+          rating: null,
+          description: '',
+          photo: null
+        };
+        setTimeout(() => {
+          this.successMessage = ''; // Limpar a mensagem após alguns segundos
+        }, 3000); // Mensagem de sucesso desaparece após 3 segundos
+      },
+      error => {
+        console.error('Error submitting comment', error);
+      }
+    );
+  }
 }

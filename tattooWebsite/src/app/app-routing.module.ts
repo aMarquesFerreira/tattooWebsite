@@ -1,13 +1,13 @@
 // src/app/app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { Espaco3dComponent } from './espaco3d/espaco3d.component';
-import { PricingComponent } from './pricing/pricing.component';
-import { WorkComponent } from './work/work.component';
-import { FooterComponent } from './footer/footer.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './views/home/home.component';
+import { AboutComponent } from './views/about/about.component';
+import { Espaco3dComponent } from './views/espaco3d/espaco3d.component';
+import { PricingComponent } from './views/pricing/pricing.component';
+import { WorkComponent } from './views/work/work.component';
+import { FooterComponent } from './views/footer/footer.component';
+import { NavbarComponent } from './views/navbar/navbar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
