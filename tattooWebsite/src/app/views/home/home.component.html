@@ -52,44 +52,34 @@
   </div>
 </ng-container>
 
- <!-- Não Responsivo -->
- <ng-container *ngIf="!isResponsive">
-  <div class="col-4 testimonials-container">
-    <img src="./assets/testimonialImg.png" alt="Good">
-    <p class="buttonsFont">GOOD</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
-</div>
-<div class="col-4 testimonials-container">
-    <img src="./assets/testimonialImg.png" alt="Good">
-    <p class="buttonsFont">BAD</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
-</div>
-<div class="col-4 testimonials-container">
-    <img src="./assets/testimonialImg.png" alt="Good">
-    <p class="buttonsFont">YYYY</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
-</div>
+<!-- Não Responsivo -->
+<ng-container *ngIf="!isResponsive">
+  <div *ngFor="let comment of comments; let i = index" class="col-4 testimonials-container" [ngClass]="{'hidden': i >= 3 && !showAllComments}">
+    <img *ngIf="comment.photo" [src]="comment.photo" alt="User Photo">
+    <p class="buttonsFont">{{ comment.name }}</p>
+    <p>{{ comment.rating }} Stars</p>
+    <p>{{ comment.description }}</p>
+  </div>
+
+  <!-- Botão para ver todos os comentários -->
+  <div class="col-12 text-center" *ngIf="comments.length > 3">
+    <button class="btn-see-all" (click)="toggleComments()">
+      {{ showAllComments ? '- Show Less' : '+ See All' }}
+    </button>
+  </div>
 </ng-container>
+
 
 <!-- Responsivo -->
 <ng-container *ngIf="isResponsive">
   <div class="testimonials-wrapper" #testimonialsWrapper>
-    <div class="col-4 testimonials-container" style="margin-top: 60px; height: auto;">
-      <img src="./assets/testimonialImg.png" alt="Good">
-      <p class="buttonsFont">GOOD</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+    <div *ngFor="let comment of comments" class="col-4 testimonials-container" style="margin-top: 60px; height: auto;">
+      <img *ngIf="comment.photo" [src]="comment.photo" alt="User Photo">
+      <p class="buttonsFont">{{ comment.name }}</p>
+      <p>{{ comment.rating }} Stars</p>
+      <p>{{ comment.description }}</p>
     </div>
-    <div class="col-4 testimonials-container" style="margin-top: 60px; height: auto;">
-      <img src="./assets/testimonialImg.png" alt="Good">      
-      <p class="buttonsFont">BAD</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
-    </div>
-    <div class="col-4 testimonials-container" style="margin-top: 60px; height: auto;">
-      <img src="./assets/testimonialImg.png" alt="Good">
-      <p class="buttonsFont">YYYY</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
-    </div>
-</div>
+  </div>
 </ng-container>
 
 

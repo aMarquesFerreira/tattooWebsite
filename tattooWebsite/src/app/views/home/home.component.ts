@@ -12,6 +12,7 @@ export class HomeComponent implements AfterViewInit {
   currentTestimonial: number = 0;
   isResponsive: boolean = false;
   successMessage: string = ''; // Nova propriedade para a mensagem de sucesso
+  showAllComments: boolean = false; // Nova variável de controle
 
   // Novo comentário
   newComment: any = {
@@ -25,6 +26,10 @@ export class HomeComponent implements AfterViewInit {
   stars: number[] = [1, 2, 3, 4, 5];
 
   constructor(private commentService: CommentService) {} // Injete o serviço
+
+  ngOnInit() {
+    this.fetchAcceptedComments();
+  }
 
   ngAfterViewInit() {
     this.checkResponsive(window.innerWidth);
@@ -40,6 +45,18 @@ export class HomeComponent implements AfterViewInit {
     if (this.isResponsive && this.testimonialsWrapper) {
       this.showTestimonial(this.currentTestimonial);
     }
+  }
+
+
+  fetchAcceptedComments() {
+    this.commentService.getAcceptedComments().subscribe(
+      comments => {
+        this.comments = comments;
+      },
+      error => {
+        console.error('Error fetching accepted comments', error);
+      }
+    );
   }
 
   showTestimonial(index: number) {
@@ -102,5 +119,9 @@ export class HomeComponent implements AfterViewInit {
         console.error('Error submitting comment', error);
       }
     );
+  }
+
+  toggleComments() {
+    this.showAllComments = !this.showAllComments; // Alterna a exibição dos comentários extras
   }
 }
