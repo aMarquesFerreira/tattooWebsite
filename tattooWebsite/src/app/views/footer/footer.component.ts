@@ -54,18 +54,43 @@ export class FooterComponent implements AfterViewInit {
     }
   }
 
+
+
+
   checkSendMessage() {
+    const countryCode = this.countryCodeInput.nativeElement.value; // Prefixo selecionado
+    const phoneNumber = this.phoneNumberInput.nativeElement.value.trim(); // Número inserido pelo usuário
+    const fullPhoneNumber = `${countryCode}${phoneNumber}`; // Montar o número completo
+    
+    const ownerPhoneNumber = '351912388378'; // Número fixo do destinatário (dono do site)
+  
     if (!this.isPhoneNumberValid) {
       console.log("false");
       this.errorMessage = 'First Submit a Valid Phone Number';
       this.clearErrorMessageAfterDelay();
     } else {
-      console.log("true");
+      const messageContent = this.messageTextarea.nativeElement.value.trim();
+  
+      if (messageContent.length === 0) {
+        this.errorMessage = 'Please enter a message before sending.';
+        this.clearErrorMessageAfterDelay();
+        return;
+      }
+  
+      // Inclui o número do remetente na mensagem
+      const message = encodeURIComponent(`Message: ${messageContent}\nSender: ${fullPhoneNumber}`);
+  
+      // Montar a URL com o número fixo do destinatário
+      const whatsappUrl = `https://wa.me/${ownerPhoneNumber}?text=${message}`;
+      window.open(whatsappUrl, '_blank'); // Abre o WhatsApp em uma nova aba
+  
       this.errorMessage = '';
       this.showValidationMessage('messageValidationMessage');
-      // Prossiga com o envio da mensagem
     }
   }
+  
+  
+  
 
   clearErrorMessageAfterDelay() {
     setTimeout(() => {
