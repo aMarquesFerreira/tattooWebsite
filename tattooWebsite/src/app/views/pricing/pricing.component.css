@@ -100,12 +100,76 @@ h1 {
     filter: grayscale(100%) contrast(120%);
 }
 
+.artist-button {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border: none; /* No border */
+    border-radius: 50px; /* Rounded edges like the example */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold; /* Bold text like the example */
+    text-transform: uppercase; /* Uppercase letters */
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
+.artist-button:hover {
+    background-color: #f0f0f0; /* Slightly darker white on hover */
+    color: black; /* Keep text black */
+    transform: translateY(-3px); /* Slight movement on hover */
+}
+
+.packs-container {
+    display: flex;
+    justify-content: space-around; /* Space out the divs */
+    margin-top: 20px; /* Add some spacing above the packs */
+    gap: 20px; /* Add spacing between the packs */
+}
+
+.pack {
+    flex: 1;
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    color: white; /* Text color */
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Colors for each pack */
+.pack-1 {
+    background-color: #6A4C93; /* Purple */
+}
+
+.pack-2 {
+    background-color: #FF6FCF; /* Pink */
+}
+
+.pack-3 {
+    background-color: #4FC1FF; /* Light Blue */
+}
 
 
 /*RESPONSIVO*/
 
 @media (max-width: 1090px) {
+    .packs-container {
+        flex-direction: column; /* Stack divs vertically */
+    }
+
+    .pack {
+        margin-bottom: 20px; /* Add spacing between stacked packs */
+    }
+
+
+    .artist-button {
+        font-size: 1em; /* Adjust button size for smaller screens */
+        padding: 12px 25px;
+    }
+
     .container{
         display: block;
     }

@@ -50,13 +50,13 @@ export class Espaco3dComponent implements OnInit, OnDestroy {
     this.controls.minPolarAngle = Math.PI / 2;
     this.controls.maxPolarAngle = Math.PI / 2;
 
-    // Limitar rotação horizontal a quase 360 graus
-    this.controls.minAzimuthAngle = -Math.PI + 2; // um pouco menos de -180 graus
-    this.controls.maxAzimuthAngle = Math.PI - 2;  // um pouco menos de 180 graus
+    // Aumentar rotação horizontal para quase 360 graus completos
+    this.controls.minAzimuthAngle = -Math.PI + 0.5;  // Permite um pouco mais que -180 graus
+    this.controls.maxAzimuthAngle = Math.PI - 0.5;   // Permite um pouco mais que 180 graus
 
     // Carregar mapa equiretangular e aplicá-lo a um cilindro
     const textureLoader = new THREE.TextureLoader();
-    textureLoader.load('./assets/pano.jpeg', (texture) => {
+    textureLoader.load('./assets/360Stu.png', (texture) => {
       const geometry = new THREE.CylinderGeometry(500, 500, 1000, 60, 1, true);
       
       // Modificar coordenadas UV para cobrir apenas metade do cilindro
