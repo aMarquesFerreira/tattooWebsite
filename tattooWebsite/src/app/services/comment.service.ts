@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CommentService {
-  private apiUrl = 'http://localhost:8080/api/comments'; // URL correta do seu servidor backend
-  private acceptedCommentsUrl = 'http://localhost:8080/api/accepted-comments'; // URL para os comentários aceitos
+  private apiUrl = 'https://tattoobackend.onrender.com/api/comments';
+  private acceptedCommentsUrl = 'https://tattoobackend.onrender.com/api/accepted-comments';
 
   constructor(private http: HttpClient) {}
 
